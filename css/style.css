@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    background-color: rgb(208, 255, 239);
+}
+
+/*Responsividade sempre!*/
+.main-game{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Círculo central*/
+.genius {
+    display: grid;
+    grid-template-areas: 'verde vermelho'
+    'amarelo azul';
+    grid-gap: 10px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 100%;
+    width: 700px;
+    height: 700px;
+}
+
+/*Setando o azul declarado no círculo, na parte inferior direita*/
+.blue{
+    grid-area: azul;
+    background-color: blue;
+    border-bottom-right-radius: 100%;
+}
+
+/*Setando o vermelho declarado no círculo, na parte superior direita*/
+.red{
+    grid-area: vermelho;
+    background-color: red;
+    border-top-right-radius: 100%;
+}
+
+/*Setando o amarelo declarado no círculo, na parte inferior esquerda*/
+.yellow{
+    grid-area: amarelo;
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+}
+
+/*Setando o verde declarado no círculo, na parte superior esquerda*/
+.green{
+    grid-area: verde;
+    background-color: green;
+    border-top-left-radius: 100%;
+}
+
+/*Mais transparente quando for selecionada*/
+.selected{
+    opacity: 0.8;
+}
